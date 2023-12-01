@@ -1,0 +1,56 @@
+@use "../../styles/" as *;
+@use "../../styles/mixin" as *;
+
+.service-container {
+    padding-top: 5.6rem;
+
+    // .service-inner {
+
+    // }
+}
+
+.service-left {
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $black;
+
+        & > span {
+            font-size: 1rem;
+            margin-left: 1rem;
+            color: $sky;
+        }
+    }
+
+    p {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+        color: $gray;
+    }
+
+    .service-btn {
+        margin-top: 2rem;
+        @include styleBtnPrimary;
+        padding: 12px 32px;
+    }
+
+    .service-left-bg1 {
+        filter: blur(280px);
+        position: absolute;
+        left: 0%;
+        bottom: -160%;
+        z-index: -10;
+    }
+}
+
+.service-right {
+    position: relative;
+
+    .service-right-bg {
+        filter: blur(300px);
+        position: absolute;
+        right: -10%;
+        bottom: -80%;
+        z-index: -10;
+    }
+}

@@ -1,0 +1,115 @@
+@use "../../styles/" as *;
+@use "../../styles/mixin" as *;
+
+.nav-container {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+
+    .nav-inner {
+        height: 10vh;
+        & > div {
+            height: 100%;
+        }
+    }
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-name {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .nav-list-icon {
+        cursor: pointer;
+        font-size: 2rem;
+        transform: translateY(-4px);
+    }
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-list {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list-item {
+        margin-left: 2.6rem;
+        cursor: pointer;
+
+        a:hover {
+            color: $sky;
+            text-decoration: underline;
+            text-shadow: 1px 1px 3px $sky;
+        }
+    }
+
+    .nav-button {
+        @include styleBtnPrimary;
+    }
+}
+
+//
+
+// /*Mobile*/
+@media (max-width: 414px) {
+    .nav-right {
+        flex-direction: column;
+        background-color: $white;
+        .nav-list {
+            .nav-list-item {
+                margin: 1rem;
+                padding: 0.5rem;
+            }
+            flex-direction: column;
+        }
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .nav-right {
+        flex-direction: column;
+        background-color: $white;
+        transform: translateY(-30rem);
+        transition: transform .3s linear;
+
+        z-index: -1;
+        .nav-list {
+            .nav-list-item {
+                margin: 1rem;
+                padding: 0.5rem;
+            }
+            flex-direction: column;
+        }
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .nav-list-icon {
+        display: none;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

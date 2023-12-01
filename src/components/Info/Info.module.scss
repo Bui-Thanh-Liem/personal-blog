@@ -1,0 +1,82 @@
+@use "../../styles/" as *;
+@use "../../styles/mixin" as *;
+
+.info-container {
+    padding: 9rem 0 1.5rem;
+}
+
+.info-left {
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $black;
+    }
+
+    .info-name {
+        margin-top: 0.5rem;
+        color: $sky;
+    }
+
+    p {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+        color: $gray;
+    }
+
+    .info-btn {
+        margin-top: 2rem;
+        @include styleBtnPrimary;
+        padding: 12px 32px;
+    }
+
+    .icon-container {
+        margin-top: 2.6rem;
+        font-size: 2rem;
+
+        a + a {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.info-right {
+    z-index: 1;
+    position: relative;
+
+    .bg1 {
+        position: absolute;
+        right: -10%;
+        top: -10%;
+        filter: blur(150px);
+        z-index: -10;
+    }
+    .bg2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -10;
+    }
+
+    & .img {
+        position: absolute;
+        top: -3rem;
+        left: -2rem;
+        transform: scale(0.8);
+    }
+
+    .img-me {
+        border-radius: 8rem;
+        border-top-right-radius: 12rem;
+        border-top-left-radius: 12rem;
+        transform: scale(0.4);
+        top: -20rem;
+        left: -8rem;
+    }
+
+    .info-icon {
+        position: absolute;
+        left: -30%;
+        top: -20%;
+        transform: scale(0.6);
+    }
+}

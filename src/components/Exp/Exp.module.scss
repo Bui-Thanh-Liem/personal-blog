@@ -1,0 +1,57 @@
+@use "../../styles/" as *;
+
+.exp-container {
+    & + .exp-container {
+        margin-top: 1rem;
+    }
+    border-left: 4px solid transparent;
+
+    &.red {
+        border-color: $red;
+    }
+
+    &.blue {
+        border-color: $blue;
+    }
+
+    &.orange {
+        border-color: $sky;
+    }
+
+    &.green {
+        border-color: $green;
+    }
+
+    .exp-circle {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: $sky;
+        margin: 0 1rem 0 -2rem;
+
+        &.red {
+            background-color: $red;
+        }
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.peacock {
+            background-color: $peacock;
+        }
+
+        &.green {
+            background-color: $green;
+        }
+    }
+
+    // .exp-title {
+
+    // }
+
+    .exp-text {
+        color: $gray;
+    }
+}

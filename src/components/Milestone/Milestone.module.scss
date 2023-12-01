@@ -1,0 +1,31 @@
+@use "../../styles/" as *;
+
+.milestone-container {
+    text-align: center;
+    display: inline-block;
+
+    & + .milestone-container {
+        margin-left: 6rem;
+    }
+    .number {
+        font-size: 3.8rem;
+        color: $sky;
+        font-weight: bold;
+
+        & > span {
+            color: $sky;
+            font-size: 2rem;
+            display: inline-block;
+            transform: translateY(-1.8rem);
+        }
+    }
+
+    .title1 {
+        font-size: 1rem;
+    }
+
+    .title2 {
+        font-weight: bold;
+        color: $sky;
+    }
+}

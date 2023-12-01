@@ -1,0 +1,60 @@
+@use "../../styles/" as *;
+@use "../../styles/mixin" as *;
+
+.contact-container {
+    padding-top: 6rem;
+    .contact-title {
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            color: $sky;
+        }
+    }
+    
+    
+    .contact-inner {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-left {
+        .contact-img {
+            width: 100%;
+            border-radius: 2rem;
+        }
+    }
+
+    .contact-right {
+        position: relative;
+        
+        .contact-bg-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 4rem;
+            
+            input,
+            textArea {
+                border: 2px solid $sky;
+                color: $sky;
+
+                &:focus {
+                    box-shadow: 4px 4px 4px $sky;
+                }
+            }
+
+            button {
+                width: 50%; 
+                margin-top: 2rem;
+                @include styleBtnPrimary;
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use "./styles" as *;
+@use "./styles/mixin.scss" as *;
+@use "./styles/global.scss";
+@import "normalize.css";
+
+
+.app-container {
+    overflow: hidden;
+}

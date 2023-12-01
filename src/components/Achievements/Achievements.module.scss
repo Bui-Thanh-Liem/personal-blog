@@ -1,0 +1,11 @@
+.achievement-container {
+    margin: 6rem auto 0;
+
+    .achievement-inner {
+        justify-content: center;
+
+        & > div {
+            text-align: center;
+        }
+    }
+}

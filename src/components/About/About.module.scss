@@ -1,0 +1,85 @@
+@use "../../styles/" as *;
+
+.about-container {
+    padding-top: 6rem;
+
+    .about-title {
+        margin-bottom: 3rem;
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1rem;
+            color: $sky;
+        }
+    }
+
+    .about-inner {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-left {
+        position: relative;
+        
+        .about-bg-left {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -10;
+        }
+        
+        .about-img {
+            width: 100%;
+            height: 30rem;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            box-shadow: $skyCard;
+        }
+    }
+
+    .about-right {
+        position: relative;
+        
+        .about-bg-right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: -10;
+        }
+        
+    
+        h1 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $gray;
+        }
+
+        .list-identity {
+            margin-top: 1rem;
+
+            li {
+                & + li {
+                    margin-top: .5rem;
+                }
+                
+                svg {
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+
+                span,a {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}

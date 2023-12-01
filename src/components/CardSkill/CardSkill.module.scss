@@ -1,0 +1,44 @@
+@use "../../styles/theme" as *;
+
+.card-container {
+    z-index: 10;
+    width: 320px;
+    padding: 0 24px 36px;
+
+    border-radius: 25px;
+    border: 8px solid $skyCard;
+    text-align: center;
+    align-items: center;
+
+    &:hover {
+        border-color: $skyCard;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+        margin: 24px 0;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin: 20px 0;
+        color: $gray;
+    }
+
+    button {
+        color: $blue;
+        padding: 8px 12px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        box-shadow: 2px 2px 4px $skyCard;
+
+        &:hover {
+            box-shadow: 1px 1px 2px $skyCard;
+        }
+    }
+}

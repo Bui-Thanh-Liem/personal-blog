@@ -1,0 +1,22 @@
+@use "../../styles/theme" as *;
+
+.floating-container {    
+    position: absolute;
+    z-index: 10;
+    
+    border-radius: 1rem;
+    width: 14rem;
+    height: 5rem;
+    box-shadow: $boxShadow;
+    background-color: $white;
+    padding: 0 28px 0 0 ;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    img {
+        transform: scale(.5);
+    }
+    
+}

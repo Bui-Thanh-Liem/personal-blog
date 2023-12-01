@@ -1,0 +1,68 @@
+@use "../../styles/" as *;
+
+.project-container {
+    position: relative;
+    padding-top: 6rem;
+
+    
+    .project-bg1 {
+        position: absolute;
+        filter: blur(340px);
+        top: 0;
+        left: 0;
+        z-index: -10;
+    }
+    .project-bg2 {
+        position: absolute;
+        filter: blur(300px);
+        bottom: 0;
+        right: 0;
+        z-index: -10;
+    }
+
+    .project-title {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1rem;
+            color: $sky;
+        }
+    }
+
+    .project-inner {
+        padding: 0;
+    }
+
+    .nav-pills {
+        margin-bottom: 2rem;
+
+        .nav-item {
+            .nav-link {
+                font-weight: bold;
+                color: $black;
+                border-radius: 25px;
+                margin-right: 1rem;
+                transition: all 0.3s linear;
+
+                &.active {
+                    background-color: transparent;
+                    text-decoration: underline;
+                    color: $sky;
+                }
+            }
+        }
+    }
+
+    .projectCard-container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}

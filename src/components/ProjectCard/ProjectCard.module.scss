@@ -1,0 +1,57 @@
+@use "../../styles/theme" as *;
+
+.prjCard-container {
+    width: 420px;
+    height: 280px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: $peacock;
+    position: relative;
+
+    .prj-img {
+        object-fit: cover;
+    }
+
+    .prjCard-overlay {
+        position: absolute;
+        inset: 0;
+        padding: 1rem;
+        background-color: $skyOverlay;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover .prjCard-overlay {
+        transform: translateY(0);
+    }
+
+    .prjCard-overlay {
+        .prjCard-title {
+            font-weight: bold;
+            color: $white;
+            font-size: 2.5rem;
+        }
+
+        .prjCard-desc {
+            color: $white;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            padding: 8px 16px;
+            color: $white;
+            border-radius: 10px;
+            border: 2px solid $sky;
+
+            & + a {
+                margin-left: 1rem;
+            }
+
+            &:hover {
+                background-color: transparent;
+                background-color: $sky;
+                color: $white;
+            }
+        }
+    }
+}

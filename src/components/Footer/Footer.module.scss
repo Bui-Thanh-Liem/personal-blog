@@ -1,0 +1,33 @@
+@use "../../styles/" as *;
+
+.footer-container {
+    margin-top: 3rem;
+    background: $sky;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+
+    .footer-inner {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-logo {
+        color: $white;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    .link-item {
+        & + .link-item {
+            margin-left: 3rem;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
