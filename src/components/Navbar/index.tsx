@@ -3,19 +3,29 @@ import { Container, Row, Col } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
 import { Link } from "react-scroll";
 import { AnimationControls, motion } from "framer-motion";
+import classNames from "classnames/bind";
 
 //
 import Toggle from "../Toggle";
 import css from "./Navbar.module.scss";
-import { useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { themeContext } from "../../context/ThemeContext";
 
 type propTypes = {
     boxShadow: AnimationControls;
 };
 
+const cx = classNames.bind(css);
+
 const Navbar = (props: propTypes) => {
     const { boxShadow } = props;
+    const [scrollHeight, setScrollHeight] = useState<number>(0);
+
+    useEffect(() => {
+       document.addEventListener("scroll", () => {
+            setScrollHeight(Math.floor(window.scrollY))   
+       })
+    })
 
     const darkMode = useContext(themeContext);
     const style = darkMode.state.darkMode
@@ -54,27 +64,27 @@ const Navbar = (props: propTypes) => {
                         className={css["nav-right"]}
                     >
                         <ul className={css["nav-list"]}>
-                            <li className={css["nav-list-item"]}>
+                            <li className={cx("nav-list-item", {"active": scrollHeight < 600 })}>
                                 <a style={style} href="#top">
                                     Home
                                 </a>
                             </li>
-                            <li className={css["nav-list-item"]}>
+                            <li className={cx("nav-list-item", {"active": scrollHeight > 600 && scrollHeight < 1562 })}>
                                 <Link to="Services" style={style}>
                                     Services
                                 </Link>
                             </li>
-                            <li className={css["nav-list-item"]}>
+                            <li className={cx("nav-list-item", {"active": scrollHeight > 1562 && scrollHeight < 2668 })}>
                                 <Link to="Experience" style={style} href="">
                                     Experience
                                 </Link>
                             </li>
-                            <li className={css["nav-list-item"]}>
+                            <li className={cx("nav-list-item", {"active": scrollHeight > 2668 && scrollHeight < 3500 })}>
                                 <Link to="Projects" style={style} href="">
                                     Projects
                                 </Link>
                             </li>
-                            <li className={css["nav-list-item"]}>
+                            <li className={cx("nav-list-item", {"active": scrollHeight > 3500 && scrollHeight < 4342 })}>
                                 <Link to="About" style={style} href="">
                                     About
                                 </Link>

@@ -47,11 +47,16 @@
     .nav-list-item {
         margin-left: 2.6rem;
         cursor: pointer;
-
-        a:hover {
+        
+        &.active a {
             color: $sky;
             text-decoration: underline;
             text-shadow: 1px 1px 3px $sky;
+            transition: all .4s linear;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
     }
 

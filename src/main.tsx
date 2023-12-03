@@ -6,7 +6,7 @@ import "./index.css";
 import { ThemeContextProvider } from "./context/ThemeContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    // <React.StrictMode>
+    <React.StrictMode>
         <ThemeContextProvider>
             <App />
         </ThemeContextProvider>
